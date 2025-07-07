@@ -4,7 +4,6 @@ const getAllTodos = async (req, res) => {
   try {
     const allTodos = await Todo.find();
     res.send({todos:allTodos});
-    console.log(req.body)
   } catch (error) {
     res.status(500).json({ error: "Failed to retrieve todos" });
   }
