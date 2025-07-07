@@ -2,6 +2,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Plus } from "lucide-react";
+const baseUrl = import.meta.env.VITE_API;
 
 function SubmitForm({ getAllTodos }) {
   const [toDo, setToDo] = useState({
@@ -21,7 +22,7 @@ function SubmitForm({ getAllTodos }) {
     
     setIsLoading(true);
     try {
-      await axios.post("http://localhost:5000/todo/create", {
+      await axios.post(`${baseUrl}/todo/create`, {
         todo: toDo.todo,
       });
       setToDo({ todo: "", isCompleted: false });

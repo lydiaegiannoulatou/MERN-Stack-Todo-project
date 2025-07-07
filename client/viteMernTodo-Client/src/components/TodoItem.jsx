@@ -2,6 +2,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Trash2, Edit3, Check, X } from "lucide-react";
+const baseUrl = import.meta.env.VITE_API;
 
 function TodoItem({ getAllTodos, todos }) {
   const [editingId, setEditingId] = useState(null);
@@ -15,7 +16,7 @@ function TodoItem({ getAllTodos, todos }) {
   async function deleteTodo(id) {
     setLoading(id, true);
     try {
-      await axios.delete(`http://localhost:5000/todo/delete/${id}`);
+      await axios.delete(`${baseUrl}/todo/delete/${id}`);
       getAllTodos();
     } catch (error) {
       console.log("Error deleting todo:", error);
@@ -34,7 +35,7 @@ function TodoItem({ getAllTodos, todos }) {
     
     setLoading(id, true);
     try {
-      await axios.put(`http://localhost:5000/todo/update/${id}`, {
+      await axios.put(`${baseUrl}/todo/update/${id}`, {
         todo: editText,
       });
       setEditingId(null);
@@ -59,7 +60,7 @@ function TodoItem({ getAllTodos, todos }) {
     setLoading(id, true);
     try {
       const updatedTodo = { ...todo, isCompleted: !todo.isCompleted };
-      await axios.put(`http://localhost:5000/todo/update/${id}`, updatedTodo);
+      await axios.put(`${baseUrl}/todo/update/${id}`, updatedTodo);
       getAllTodos();
     } catch (err) {
       console.error("Error updating todo status", err);

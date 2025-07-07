@@ -4,7 +4,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import { useTheme } from "./hooks/useTheme";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+const baseUrl = import.meta.env.VITE_API;
 function App() {
   const [todos, setTodos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +15,7 @@ function App() {
   async function getAllTodos() {
     try {
       setError(null);
-      let res = await axios.get("http://localhost:5000/todo");
+      let res = await axios.get(`${baseUrl}/todo`);
       setTodos(res.data.todos || []);
     } catch (error) {
       console.log(error);
