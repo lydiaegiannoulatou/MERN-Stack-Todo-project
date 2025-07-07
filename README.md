@@ -9,13 +9,14 @@ Includes a theme toggle, responsive layout, and persistent tasks.
 ## ⚙️ Tech Stack
 
 ### 🖼️ Frontend (Vite + React 19)
+
 - React 19
 - Vite
 - Axios
 - Lucide React Icons
 
-
 ### 🛠️ Backend (Node + Express + MongoDB)
+
 - Express.js
 - Mongoose
 - MongoDB
@@ -24,6 +25,7 @@ Includes a theme toggle, responsive layout, and persistent tasks.
 ---
 
 ## 📁 Project Structure
+
 ```bash
 todoMern/
 ├── client/
@@ -32,7 +34,6 @@ todoMern/
 │ └── server.js
 └── README.md
 ```
-
 
 ---
 
@@ -51,6 +52,7 @@ cd todoMern
 cd backend
 npm install
 ```
+
 ### Create a .env file:
 
 ```
@@ -65,38 +67,51 @@ npm start
 ```
 
 ## 💻 3. Frontend Setup
+
 ```bash
 cd client/viteMernTodo-Client
 npm install
 npm run dev
 ```
+
 Runs at http://localhost:5173
 
 ### Create a .env file:
+
 ```
 VITE_API=https://your-backend-api-url.com
 ```
+
 ---
 
+## 🌐 Live Demo
+
+Check out the deployed version of the project:
+
+🔗 [todotheapp.netlify.app](https://todotheapp.netlify.app)
+
 ## 🌗 Theme Toggle
+
 Includes a floating toggle button to switch between light and dark themes. Built using:
 
- - lucide-react icons (🌞/🌙)
+- lucide-react icons (🌞/🌙)
 
- - Conditional CSS class toggling
+- Conditional CSS class toggling
 
- - Custom styling or Tailwind-compatible logic
- ---
+- Custom styling or Tailwind-compatible logic
 
- ## ✅ Future Improvements
+---
 
-  - User authentication (JWT, Google login)
+## ✅ Future Improvements
 
-  - Drag-and-drop reordering
+- User authentication (JWT, Google login)
 
-  - Deadline reminders
+- Drag-and-drop reordering
 
-  ---
+- Deadline reminders
 
-  ## 🙋‍♀️ Questions?
-   - Email: lydiaelliegiannoulatou@gmail.com
+---
+
+## 🙋‍♀️ Questions?
+
+- Email: lydiaelliegiannoulatou@gmail.com
