@@ -13,7 +13,7 @@ Includes a theme toggle, responsive layout, and persistent tasks.
 - Vite
 - Axios
 - Lucide React Icons
-- PropTypes
+
 
 ### 🛠️ Backend (Node + Express + MongoDB)
 - Express.js
@@ -72,6 +72,10 @@ npm run dev
 ```
 Runs at http://localhost:5173
 
+### Create a .env file:
+```
+VITE_API=https://your-backend-api-url.com
+```
 ---
 
 ## 🌗 Theme Toggle
